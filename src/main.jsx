@@ -7,12 +7,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Main from './Layouts/Main.jsx';
+import ErrorPage from './components/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main/>,
+    errorElement: <ErrorPage />
   },
 ]);
 
