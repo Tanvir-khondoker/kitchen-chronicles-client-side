@@ -12,6 +12,7 @@ import Main from './Layouts/Main.jsx';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/pages/Home';
 import Chef from './components/pages/Chef';
+import Blog from './components/pages/Blog';
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home/>
+      },
+      {
+        path:"/blog",
+        element:<Blog/>
       },
       {
         path: "/chefs/:id",

@@ -31,47 +31,58 @@ const Chef = () => {
     
     <CardGroup className='p-5 row'>
      
-     
       <Card className='col-md-6'>
-        <Card.Img style={{height:'300px'}} className='mx-auto rounded w-full'  variant="top" src="https://via.placeholder.com/150" />
+        <Card.Img style={{height:'300px'}} className='mx-auto rounded w-full' variant="top" src={first_recipe.recipe_picture} />
         <Card.Body>
-          <Card.Title>Card Title 1</Card.Title>
+          <Card.Title>{first_recipe.recipe_name}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of the cards content.
+            <span style={{fontWeight:'bold'}}> Ingredients:</span> {first_recipe.ingredients}
+          </Card.Text>
+          <Card.Text>
+            <span style={{fontWeight:'bold'}}> Cooking Method:</span> {first_recipe.cooking_method}
+          </Card.Text>
+          <Card.Text>
+            <span style={{fontWeight:'bold'}}> Rating:</span> {first_recipe.rating}
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <Button variant="outline-success" className='mx-auto'>Add to favorite</Button>
         </Card.Footer>
-      
-      
-      
-      
       </Card>
+      
+      
       <Card className='col-md-6'>
-        <Card.Img style={{height:'300px'}} className='mx-auto rounded w-full' variant="top" src="https://via.placeholder.com/150" />
+        <Card.Img style={{height:'300px'}} className='mx-auto rounded w-full' variant="top" src={second_recipe.recipe_picture} />
         <Card.Body>
-          <Card.Title>{third_recipe.recipe_name}</Card.Title>
+          <Card.Title>{second_recipe.recipe_name}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of the cards content.
+            <span style={{fontWeight:'bold'}}> Ingredients:</span> {second_recipe.ingredients}
+          </Card.Text>
+          <Card.Text>
+            <span style={{fontWeight:'bold'}}> Cooking Method:</span> {second_recipe.cooking_method}
+          </Card.Text>
+          <Card.Text>
+            <span style={{fontWeight:'bold'}}> Rating:</span> {second_recipe.rating}
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <Button variant="outline-success" className='mx-auto'>Add to favorite</Button>
         </Card.Footer>
-     
-     
-     
-     
-     
-     
       </Card>
+     
+     
       <Card className='col-md-6'>
-        <Card.Img style={{height:'300px'}} className='mx-auto rounded w-full' variant="top" src="https://via.placeholder.com/150" />
+        <Card.Img style={{height:'300px'}} className='mx-auto rounded w-full' variant="top" src={third_recipe.recipe_picture} />
         <Card.Body>
           <Card.Title>{third_recipe.recipe_name}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of the cards content.
+            <span style={{fontWeight:'bold'}}> Ingredients:</span> {third_recipe.ingredients}
+          </Card.Text>
+          <Card.Text>
+            <span style={{fontWeight:'bold'}}> Cooking Method:</span> {third_recipe.cooking_method}
+          </Card.Text>
+          <Card.Text>
+            <span style={{fontWeight:'bold'}}> Rating:</span> {third_recipe.rating}
           </Card.Text>
         </Card.Body>
         <Card.Footer>
