@@ -8,7 +8,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
+        <div className='mt-3'>
             <Navbar bg="light" variant="light">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
