@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const Footer = () => {
+const Chefs = () => {
     return (
         <div>
-           <h3>Footer will comeing soon.</h3> 
+            <h2>Chefs will comeing soon</h2>
         </div>
     );
 };
 
-export default Footer;
+export default Chefs;
