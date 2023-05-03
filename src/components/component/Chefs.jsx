@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Row, Col } from "react-bootstrap";
+import { FaArrowRight } from "react-icons/fa";
 
 const Chefs = () => {
   const [chefsData, setChefsData] = useState([]);
@@ -20,25 +21,30 @@ const Chefs = () => {
   }, []);
 
   return (
-    <div>
-      <div className="d-flex flex-wrap justify-content-center">
+    <div style={{marginTop:'200px'}}>
+        <h2 className="text-center">Our Top Well Known Turkish Chefs</h2>
+      <Row style={{width:'95%'}} className="justify-content-center mx-auto mt-5">
         {chefsData.map((chef) => (
-          <Card style={{ width: "18rem" }} key={chef.id}>
-            <Card.Img variant="top" src={chef.chef_picture} />
-            <Card.Body>
-              <Card.Title>{chef.name}</Card.Title>
-              <Card.Text>
-                <div>Years of experience: {chef.experience_years}</div>
-                <div>Numbers of recipes: {chef.num_recipes}</div>
-                <div>Likes: {chef.likes}</div>
-              </Card.Text>
-              <Button variant="primary">
-                <Link to={`/chefs/${chef.id}`}>View Recipes</Link>
-              </Button>
-            </Card.Body>
-          </Card>
+          <Col xs={12} sm={12} md={6} lg={4} className="mb-4"  key={chef.id}>
+            <Card >
+              <Card.Img style={{ height: "300px" }} variant="top" src={chef.chef_picture} />
+              <Card.Body>
+                <Card.Title>{chef.name}</Card.Title>
+                <Card.Text>
+                  <div>Years of experience: {chef.experience_years}</div>
+                  <div>Numbers of recipes: {chef.num_recipes}</div>
+                  <div>Likes: {chef.likes}</div>
+                </Card.Text>
+                <Button variant="primary">
+                  <Link className="text-white text-decoration-none" to={`/chefs/${chef.id}`}>
+                  View Recipes <FaArrowRight/>
+                  </Link>
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
         ))}
-      </div>
+      </Row>
     </div>
   );
 };

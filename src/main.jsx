@@ -11,6 +11,7 @@ import {
 import Main from './Layouts/Main.jsx';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/pages/Home';
+import Chef from './components/pages/Chef';
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home/>
-      }
+      },
+      {
+        path: "/chefs/:id",
+        element: <Chef/>
+      },
     ]
   },
 ]);
@@ -31,3 +36,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
 )
+
+
+
