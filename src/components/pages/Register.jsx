@@ -17,10 +17,10 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
       
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.{8,})/;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.{6,})/;
     
     if (!passwordRegex.test(password)) {
-      setError("Password must be at least 8 characters long, contain one capital letter, and one special character.");
+      setError("Password must be at least 6 characters long, contain one capital letter, and one special character.");
       return;
     }
 

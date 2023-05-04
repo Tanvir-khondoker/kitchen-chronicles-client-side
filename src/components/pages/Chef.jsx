@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Toast } from "react-bootstrap";
 import React, { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { Container, Row, Col, CardGroup, Button } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
@@ -23,12 +24,12 @@ const Chef = () => {
   return (
     <div>
       <Card style={{ width: "65%" }} className="mx-auto mt-5 mb-5 border-0">
-        <Card.Img
-          className="mx-auto"
-          variant="top"
-          src={chef_picture}
-          style={{ width: "500px", height: "400px" }}
-        />
+        
+      <LazyLoadImage className="mx-auto rounded" src={chef_picture}
+       style={{ width: "500px", height: "400px" }}
+        alt="Image Alt"
+      />
+        
         <Card.Body>
           <Card.Title className="text-center">{name}</Card.Title>
           <Card.Text>{short_bio}</Card.Text>
