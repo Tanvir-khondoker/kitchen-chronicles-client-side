@@ -32,7 +32,9 @@ const Chefs = () => {
                 <Card.Title>{chef.name}</Card.Title>
                 <Card.Text>
                   <span>Years of experience: {chef.experience_years}</span>
+                  <br />
                   <span>Numbers of recipes: {chef.num_recipes}</span>
+                  <br />
                   <span className="mt-4"><span style={{fontWeight:'bold'}}>Likes : </span> {chef.likes}</span>
                 </Card.Text>
                 

@@ -12,7 +12,7 @@ import Main from './Layouts/Main.jsx';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/pages/Home';
 import Chef from './components/pages/Chef';
-import Blog from './components/pages/Blog';
+import Blog from './components/pages/BlogPage';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import AuthProvider from './providers/AuthProvider';
