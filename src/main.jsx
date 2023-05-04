@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: "/chefs/:id",
         element:<PrivateRoute><Chef/></PrivateRoute>,
-        loader: ({params}) =>fetch(`http://localhost:5000/chefs/${params.id}`)
+        loader: ({params}) =>fetch(`https://kitchen-chronicles-server-tanvir-khondoker.vercel.app/chefs/${params.id}`)
       },
     ]
   },

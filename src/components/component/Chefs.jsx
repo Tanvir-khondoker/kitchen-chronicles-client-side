@@ -10,7 +10,7 @@ const Chefs = () => {
   useEffect(() => {
     const fetchChefsData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/chefs");
+        const response = await fetch("https://kitchen-chronicles-server-tanvir-khondoker.vercel.app/chefs");
         const data = await response.json();
         setChefsData(data);
       } catch (error) {

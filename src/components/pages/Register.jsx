@@ -10,7 +10,7 @@ import { Result } from 'postcss';
 
 const Register = () => {
     
-    const {createUser} = useContext(AuthContext);
+    const {createUser,profileUpdating} = useContext(AuthContext);
 
     const [accepted, setAccepted] = useState(false);
 
@@ -31,6 +31,15 @@ const Register = () => {
         .catch(error =>{
             console.log(error);
         })
+
+
+        profileUpdating(name, photo)
+        .then(() => {
+            // Profile updated!
+            // ...
+          }).catch((error) => {
+            console.log(error);
+          });
         
     }
 
@@ -86,3 +95,5 @@ const Register = () => {
 };
 
 export default Register;
+
+
