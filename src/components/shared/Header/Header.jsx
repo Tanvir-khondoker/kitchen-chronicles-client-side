@@ -21,7 +21,7 @@ const Header = () => {
           </NavLink>
         </Navbar.Brand>
         <Nav className="ml-auto">
-          <Nav.Link as={NavLink} to="/" exact className="text-decoration-none">
+          <Nav.Link as={NavLink} to="/" exact={true} className="text-decoration-none">
             Home
           </Nav.Link>
           <Nav.Link as={NavLink} to="/blog" className="text-decoration-none">

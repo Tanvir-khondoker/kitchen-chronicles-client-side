@@ -31,9 +31,9 @@ const Chefs = () => {
               <Card.Body>
                 <Card.Title>{chef.name}</Card.Title>
                 <Card.Text>
-                  <div>Years of experience: {chef.experience_years}</div>
-                  <div>Numbers of recipes: {chef.num_recipes}</div>
-                  <div className="mt-4"><span style={{fontWeight:'bold'}}>Likes : </span> {chef.likes}</div>
+                  <span>Years of experience: {chef.experience_years}</span>
+                  <span>Numbers of recipes: {chef.num_recipes}</span>
+                  <span className="mt-4"><span style={{fontWeight:'bold'}}>Likes : </span> {chef.likes}</span>
                 </Card.Text>
                 
                   <Link className="text-white text-decoration-none btn" to={`/chefs/${chef.id}`}>
