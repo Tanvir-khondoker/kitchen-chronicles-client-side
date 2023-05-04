@@ -35,18 +35,7 @@ const Footer = () => {
               Stay up-to-date with the latest recipes and news from chef Recipe:
             </p>
             <div className="d-flex justify-content-center">
-              <a href="#" className="me-3">
-                <i className="fab fa-facebook fa-lg"></i>
-              </a>
-              <a href="#" className="me-3">
-                <i className="fab fa-twitter fa-lg"></i>
-              </a>
-              <a href="#" className="me-3">
-                <i className="fab fa-instagram fa-lg"></i>
-              </a>
-              <a href="#" className="me-3">
-                <i className="fab fa-youtube fa-lg"></i>
-              </a>
+              
             </div>
           </Col>
         </Row>

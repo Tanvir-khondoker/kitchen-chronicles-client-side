@@ -13,6 +13,9 @@ import ErrorPage from './components/ErrorPage';
 import Home from './components/pages/Home';
 import Chef from './components/pages/Chef';
 import Blog from './components/pages/Blog';
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
+import AuthProvider from './providers/AuthProvider';
 
 
 const router = createBrowserRouter([
@@ -30,6 +33,14 @@ const router = createBrowserRouter([
         element:<Blog/>
       },
       {
+        path:"/login",
+        element:<Login/>
+      },
+      {
+        path:"/register",
+        element:<Register/>
+      },
+      {
         path: "/chefs/:id",
         element: <Chef/>,
         loader: ({params}) =>fetch(`http://localhost:5000/chefs/${params.id}`)
@@ -40,7 +51,9 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
 )
 
 

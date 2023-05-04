@@ -33,13 +33,13 @@ const Chefs = () => {
                 <Card.Text>
                   <div>Years of experience: {chef.experience_years}</div>
                   <div>Numbers of recipes: {chef.num_recipes}</div>
-                  <div>Likes: {chef.likes}</div>
+                  <div className="mt-4"><span style={{fontWeight:'bold'}}>Likes : </span> {chef.likes}</div>
                 </Card.Text>
-                <Button variant="primary">
-                  <Link className="text-white text-decoration-none" to={`/chefs/${chef.id}`}>
-                  View Recipes <FaArrowRight/>
+                
+                  <Link className="text-white text-decoration-none btn" to={`/chefs/${chef.id}`}>
+                  <Button>View Recipes <FaArrowRight/></Button> 
                   </Link>
-                </Button>
+                
               </Card.Body>
             </Card>
           </Col>
