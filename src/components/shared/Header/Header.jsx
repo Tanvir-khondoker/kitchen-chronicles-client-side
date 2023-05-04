@@ -1,16 +1,24 @@
-import './Header.css'
-import { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { AuthContext } from '../../../providers/AuthProvider';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaUserCircle } from 'react-icons/fa';
-import { Button } from 'react-bootstrap';
+import "./Header.css";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FaUserCircle } from "react-icons/fa";
+import { Button } from "react-bootstrap";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <Navbar bg="light" variant="light" className="mt-3">
@@ -21,20 +29,31 @@ const Header = () => {
           </NavLink>
         </Navbar.Brand>
         <Nav className="ml-auto">
-          <Nav.Link as={NavLink} to="/" exact={true} className="text-decoration-none">
+          <Nav.Link
+            as={NavLink}
+            to="/"
+            exact={true}
+            className="text-decoration-none"
+          >
             Home
           </Nav.Link>
           <Nav.Link as={NavLink} to="/blog" className="text-decoration-none">
             Blog
           </Nav.Link>
-          {user && <Nav.Link as={NavLink} to="/#" className="text-decoration-none">
-            <FaUserCircle style={{fontSize:'2rem'}}/>
-          </Nav.Link>}
-          {user?<Button variant='secondary'>Logout</Button>:
-          <Link to='/login'>
-            <Button>Login</Button>
-          </Link>  
-          }
+          {user && (
+            <Nav.Link as={NavLink} to="/#" className="text-decoration-none">
+              <FaUserCircle style={{ fontSize: "2rem" }} />
+            </Nav.Link>
+          )}
+          {user ? (
+            <Button onClick={handleLogout} variant="secondary">
+              Logout
+            </Button>
+          ) : (
+            <Link to="/login">
+              <Button>Login</Button>
+            </Link>
+          )}
         </Nav>
       </Container>
     </Navbar>
