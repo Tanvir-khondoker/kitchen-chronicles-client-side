@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer style={{marginTop:'150px', width:'95%'}}   className="bg-light border  p-3  mx-auto ">
+    <footer className="bg-light border p-3 mx-auto mt-5">
       <Container className="py-4 bg-info-subtle">
         <Row>
           <Col md={4} className="mb-3 mb-md-0">
@@ -22,7 +24,7 @@ const Footer = () => {
             <p>
               1234 Main St., Suite 100
               <br />
-              Nyc, USA 12345
+              Dhaka, Bangladesh 12345
               <br />
               Phone: (123) 456-7890
               <br />
@@ -32,10 +34,24 @@ const Footer = () => {
           <Col md={4}>
             <h4>Follow Us</h4>
             <p>
-              Stay up-to-date with the latest recipes and news from chef Recipe:
+              Stay up-to-date with the latest recipes and news from Chef Recipe:
             </p>
             <div className="d-flex justify-content-center">
-              
+              <Link
+                to="https://www.facebook.com/"
+                className="text-secondary me-3"
+              >
+                <FaFacebook size={30} />
+              </Link>
+              <Link
+                to="https://www.instagram.com/"
+                className="text-secondary me-3"
+              >
+                <FaInstagram size={30} />
+              </Link>
+              <Link to="https://twitter.com/" className="text-secondary">
+                <FaTwitter size={30} />
+              </Link>
             </div>
           </Col>
         </Row>
@@ -43,7 +59,8 @@ const Footer = () => {
       <div className="bg-dark py-3">
         <Container className="text-center">
           <p className="mb-0 text-light">
-            &copy; 2023 Chefs Recipe. All rights reserved.
+            © {new Date().getFullYear()} Kitchen Chronicles. All rights
+            reserved.
           </p>
         </Container>
       </div>
