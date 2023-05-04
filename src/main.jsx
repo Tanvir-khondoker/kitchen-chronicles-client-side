@@ -17,6 +17,7 @@ import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import AuthProvider from './providers/AuthProvider';
 import PrivateRoute from './privateRoute';
+import TermsCondition from './components/component/TermsCondition';
 
 
 
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element:<Login/>
+      },
+      {
+        path:"/terms-condition",
+        element:<TermsCondition/>
       },
       {
         path:"/register",
