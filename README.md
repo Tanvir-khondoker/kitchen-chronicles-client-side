@@ -21,7 +21,6 @@ To run the project locally, follow these steps:
 Clone the repository to your local machine
 Install the required dependencies by running npm install
 Start the development server by running npm start
-Open your browser and navigate to http://localhost:3000
 Live Site
 The live site is hosted on Firebase at the following URL: https://chefs-ph-project.web.app/
 
